@@ -3,17 +3,13 @@ function intervalScheduling(precos, taxa) {
     let acao = -precos[0]; 
   
     for (let i = 1; i < precos.length; i++) {
-      if (precos[i] + taxa < acao) {
-        lucro += acao - taxa; 
-        acao = precos[i];
-      } else if (precos[i] > acao) {
-        acao = precos[i]; 
-      }
-    }
-  
-    if (acao > 0) {
-      lucro += acao - taxa;
-    }
+        if (precos[i] - taxa > acao) {
+            lucro += precos[i] - taxa - acao; 
+            acao = precos[i] - taxa; 
+          } else if (precos[i] + taxa < acao) {
+            acao = precos[i] - taxa; 
+          }
+        }
   
     return lucro;
   }

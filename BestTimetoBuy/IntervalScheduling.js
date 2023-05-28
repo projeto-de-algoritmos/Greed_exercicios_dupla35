@@ -1,4 +1,9 @@
-function intervalScheduling(precos, taxa) {
+/**
+ * @param {number[]} precos
+ * @param {number} taxa
+ * @return {number}
+ */
+var maxProfit = function(precos, taxa) {
     let compra = precos[0];
     let lucro = 0; 
   
@@ -16,12 +21,6 @@ function intervalScheduling(precos, taxa) {
     return lucro;
   }
   
-//TESTES
-  const precos = [1,3,7,5,10,3];
-  const taxa = 3;
-  
-  const lucroMaximo = intervalScheduling(precos, taxa);
-  console.log(lucroMaximo);
   
   
 

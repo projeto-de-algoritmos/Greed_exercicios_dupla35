@@ -28,6 +28,17 @@ var leastInterval = function(tasks, n) {
     }
   }
 
+  // Calculando o número de intervalos necessários
+  const intervalsCount = maxFreq - 1;
+
+  // Calculando o número de espaços ociosos entre as tarefas
+  const idleSlots = intervalsCount * (n - (maxCount - 1));
+
+  // Calculando o número de tarefas que não são da mesma frequência máxima
+  const remainingTasks = tasks.length - maxCount * maxFreq;
+
+  // Calculando o número total de unidades de tempo
+  const totalTime = tasks.length + Math.max(0, idleSlots - remainingTasks);
 
   return totalTime;
 };

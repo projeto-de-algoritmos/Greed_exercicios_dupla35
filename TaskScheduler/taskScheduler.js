@@ -12,6 +12,22 @@ var leastInterval = function(tasks, n) {
     taskFreq[index]++;
   }
 
+  // Ordenando as tarefas em ordem decrescente de frequência
+  taskFreq.sort((a, b) => b - a);
+
+  // Encontrando o número máximo de tarefas com a mesma frequência máxima
+  let maxFreq = taskFreq[0];
+
+  // Calculando o número de tarefas que têm a mesma frequência máxima
+  let maxCount = 1;
+  for (let i = 1; i < taskFreq.length; i++) {
+    if (taskFreq[i] === maxFreq) {
+      maxCount++;
+    } else {
+      break;
+    }
+  }
+
 
   return totalTime;
 };

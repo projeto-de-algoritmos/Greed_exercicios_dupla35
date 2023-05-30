@@ -11,11 +11,9 @@ O exercício consiste em receber um array com quantidades de combustível dispon
 
 Examplo:
 
-Input: tasks = ["A","A","A","B","B","B"], n = 2
-Output: 8
-Explanation: 
-A -> B -> idle -> A -> B -> idle -> A -> B
-There is at least 2 units of time between any two same tasks.
+Input: gas = [1,2,3,4,5], cost = [3,4,5,1,2]
+Output: 3
+
 
 # O que foi utilizado para resolver
 
